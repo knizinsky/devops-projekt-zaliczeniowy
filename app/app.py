@@ -40,8 +40,66 @@ users = [
             'email': 'adam.nowak@example.com',
             'phone': '+48 987 654 321'
         },
+    },
+    {
+        'name': 'Katarzyna Wiśniewska',
+        'profession': 'Data Scientist',
+        'skills': [
+            'Python, R, SQL',
+            'Uczenie maszynowe (scikit-learn, TensorFlow)',
+            'Analiza danych (Pandas, NumPy)',
+            'Przetwarzanie dużych zbiorów danych'
+        ],
+        'experience': [
+            {'position': 'Data Scientist', 'company': 'DataTech', 'years': '2021-2025'},
+            {'position': 'Data Analyst', 'company': 'DataLab', 'years': '2018-2021'}
+        ],
+        'location': 'Wrocław, Polska',
+        'contact': {
+            'email': 'katarzyna.wisniewska@example.com',
+            'phone': '+48 321 654 987'
+        },
+    },
+    {
+        'name': 'Michał Zieliński',
+        'profession': 'Backend Developer',
+        'skills': [
+            'Java, Spring, Hibernate',
+            'Bazy danych (MySQL, PostgreSQL)',
+            'API RESTful',
+            'Wzorce projektowe (Design Patterns)'
+        ],
+        'experience': [
+            {'position': 'Backend Developer', 'company': 'SoftWare Solutions', 'years': '2020-2025'},
+            {'position': 'Junior Backend Developer', 'company': 'TechInno', 'years': '2017-2020'}
+        ],
+        'location': 'Poznań, Polska',
+        'contact': {
+            'email': 'michal.zielinski@example.com',
+            'phone': '+48 654 321 987'
+        },
+    },
+    {
+        'name': 'Anna Nowakowska',
+        'profession': 'UI/UX Designer',
+        'skills': [
+            'Adobe XD, Figma, Sketch',
+            'Projektowanie UI, prototypowanie',
+            'Zrozumienie potrzeb użytkowników',
+            'Przeprowadzanie testów użyteczności'
+        ],
+        'experience': [
+            {'position': 'UI/UX Designer', 'company': 'CreativeStudio', 'years': '2019-2025'},
+            {'position': 'Junior Designer', 'company': 'DesignCraft', 'years': '2017-2019'}
+        ],
+        'location': 'Gdańsk, Polska',
+        'contact': {
+            'email': 'anna.nowakowska@example.com',
+            'phone': '+48 876 543 210'
+        },
     }
 ]
+
 
 @app.route('/')
 def home():
