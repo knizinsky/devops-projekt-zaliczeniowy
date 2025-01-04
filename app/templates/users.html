@@ -24,18 +24,24 @@
         </nav>
     </header>
 
-    <section class="about">
+    <section>
         <div class="data-container">
             <h1>Lista użytkowników</h1>
-            <ul>
+            <ul class="user-list">
                 {% for user in users %}
                 <li>
-                    <a href="/user/{{ loop.index0 }}">{{ user['name'] }}</a> - {{ user['profession'] }}
+                    <a href="/user/{{ loop.index0 }}">
+                        <div class="user-item">
+                            <span class="user-name">{{ user['name'] }}</span>
+                            <span class="user-profession">{{ user['profession'] }}</span>
+                        </div>
+                    </a>
                 </li>
                 {% endfor %}
             </ul>
         </div>
     </section>
+
 
 
     <footer>
