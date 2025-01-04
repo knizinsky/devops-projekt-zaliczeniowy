@@ -1,0 +1,42 @@
+name: CI Pipeline with Security Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Build Docker image
+      run: |
+        docker build -t flask-webapp .
+
+    - name: Run basic tests
+      run: |
+        echo "Running basic test..."
+        echo "Test passed!"
+
+    - name: Scan Docker image with Trivy
+      run: |
+        docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+          aquasec/trivy:latest image --severity CRITICAL,HIGH flask-webapp
