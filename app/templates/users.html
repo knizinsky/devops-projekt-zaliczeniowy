@@ -19,29 +19,24 @@
         <nav>
             <ul>
                 <li><a href="/">Strona Główna</a></li>
-                <li><a href="/about">O mnie</a></li>
+                <li><a href="/users">Lista Użytkowników</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="about">
         <div class="data-container">
-            <h1>O mnie</h1>
-            <p>Imię i nazwisko: {{ about_info['name'] }}</p>
-            <p>Stanowisko: {{ about_info['profession'] }}</p>
-            <br>
-            <h2>Umiejętności:</h2>
+            <h1>Lista użytkowników</h1>
             <ul>
-                {% for skill in about_info['skills'] %}
-                <li>{{ skill }}</li>
+                {% for user in users %}
+                <li>
+                    <a href="/user/{{ loop.index0 }}">{{ user['name'] }}</a> - {{ user['profession'] }}
+                </li>
                 {% endfor %}
             </ul>
-            <br>
-            <h2>Kontakt:</h2>
-            <p>Email: {{ about_info['contact']['email'] }}</p>
-            <p>Telefon: {{ about_info['contact']['phone'] }}</p>
         </div>
     </section>
+
 
     <footer>
         <p>&copy; 2025 Aplikacja do wyświetlania użytkowników</p>
