@@ -75,7 +75,7 @@ Projekt wykorzystuje GitHub Actions do zautomatyzowanego procesu Continuous Inte
 - Workflow uruchamia się automatycznie przy każdym pushu lub pull request do gałęzi main.
 
 **Narzędzia i technologie:**
-- Python 3.9+
+- Python 3.13+
 - Flask - Framework do budowy aplikacji webowych w Pythonie.
 - Docker - Konteneryzacja aplikacji.
 - GitHub Actions - Automatyzacja procesu CI/CD.
