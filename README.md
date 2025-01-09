@@ -28,8 +28,8 @@ Aby uruchomić aplikację w Dockerze, wykonaj poniższe kroki:
 1. **Sklonuj repozytorium**:
 
    ```bash
-   git clone https://github.com/twoje-repozytorium.git
-   cd twoje-repozytorium
+   git clone https://github.com/knizinsky/devops-projekt-zaliczeniowy.git
+   cd devops-projekt-zaliczeniowy
    ```
 
 2. **Zbuduj obraz Docker**:
